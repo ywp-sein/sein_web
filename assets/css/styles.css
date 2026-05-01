@@ -553,8 +553,9 @@ h3 {
 .focus-card {
   min-height: 310px;
   padding: 28px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
 }
 
 .focus-card:nth-child(2) {
@@ -572,11 +573,14 @@ h3 {
 .card-number {
   color: var(--muted);
   font-weight: 900;
-  margin-bottom: auto;
+  min-height: 1.6em;
 }
 
 .focus-card h3 {
+  min-height: 3.1em;
   margin-top: 44px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .focus-card p,
