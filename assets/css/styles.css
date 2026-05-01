@@ -101,7 +101,7 @@ img {
 .nav-group > a {
   border-radius: 6px;
   padding: 9px 12px;
-  color: var(--green-dark);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .site-nav a:hover,
@@ -109,17 +109,18 @@ img {
 .site-nav a[aria-current="page"],
 .nav-group:hover > a,
 .nav-group:focus-within > a {
-  background: var(--teal-soft);
+  background: rgba(255, 255, 255, 0.12);
   outline: none;
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--green);
+  color: white;
   font-weight: 800;
 }
 
 .nav-group.is-open > a {
-  background: var(--teal-soft);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
   outline: none;
 }
 
@@ -520,6 +521,11 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.action-followup {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
 }
 
 .focus-card {
