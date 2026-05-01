@@ -550,6 +550,11 @@ h3 {
   margin-top: 18px;
 }
 
+.single-action {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 680px;
+}
+
 .focus-card {
   min-height: 310px;
   padding: 28px;
