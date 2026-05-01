@@ -898,6 +898,29 @@ blockquote cite {
   border-top: 5px solid var(--red);
 }
 
+.post-card-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 18px;
+  align-items: start;
+}
+
+.post-image-preview {
+  display: block;
+  width: 112px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--teal-soft);
+}
+
+.post-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .post-card time {
   color: var(--green);
   font-size: 0.82rem;
@@ -947,6 +970,19 @@ blockquote cite {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid var(--line);
+}
+
+.post-full-image {
+  margin: 0 0 24px;
+}
+
+.post-full-image img {
+  width: min(100%, 760px);
+  max-height: 82vh;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--teal-soft);
 }
 
 .post-body p,
@@ -1076,6 +1112,14 @@ blockquote cite {
     position: static;
   }
 
+  .post-card-main {
+    grid-template-columns: minmax(0, 1fr) 96px;
+  }
+
+  .post-image-preview {
+    width: 96px;
+  }
+
   .pathway {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -1107,6 +1151,14 @@ blockquote cite {
   .hero-actions,
   .button {
     width: 100%;
+  }
+
+  .post-card-main {
+    grid-template-columns: 1fr;
+  }
+
+  .post-image-preview {
+    width: 132px;
   }
 
   .focus-card {

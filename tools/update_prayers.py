@@ -14,6 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PRAYERS_SRC = ROOT.parent / "sein_prayers" / "src"
 SUMMARY = PRAYERS_SRC / "SUMMARY.md"
 OUTPUT = ROOT / "prayers" / "index.html"
+PRAYER_IMAGE_DIR = ROOT / "assets" / "media" / "prayer_images"
+PRAYER_IMAGE_URL = "/assets/media/prayer_images"
+IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".JPG", ".JPEG", ".PNG", ".WEBP")
 
 
 @dataclass
@@ -24,6 +27,7 @@ class PrayerPost:
     date_iso: str
     excerpt: str
     body_html: str
+    image_url: str
 
 
 def parse_summary() -> list[tuple[str, str]]:
@@ -54,6 +58,7 @@ def parse_post(title_from_summary: str, rel_path: str) -> PrayerPost:
     excerpt = make_excerpt(body_text)
     number = Path(rel_path).stem
     date_iso = make_iso_date(date_display)
+    image_url = find_prayer_image(number)
 
     return PrayerPost(
         number=number,
@@ -62,7 +67,17 @@ def parse_post(title_from_summary: str, rel_path: str) -> PrayerPost:
         date_iso=date_iso,
         excerpt=excerpt,
         body_html=markdown_to_html(body_text),
+        image_url=image_url,
     )
+
+
+def find_prayer_image(number: str) -> str:
+    padded = f"{int(number):04d}"
+    for extension in IMAGE_EXTENSIONS:
+        candidate = PRAYER_IMAGE_DIR / f"{padded}{extension}"
+        if candidate.exists():
+            return f"{PRAYER_IMAGE_URL}/{padded}{extension}"
+    return ""
 
 
 def make_iso_date(date_display: str) -> str:
@@ -143,13 +158,34 @@ def markdown_to_html(text: str) -> str:
 
 def post_html(post: PrayerPost, featured: bool) -> str:
     classes = "post-card featured" if featured else "post-card"
+    display_title = post.title
+    image_alt = html.escape(f"Prayer image for {display_title}")
+    preview_image = ""
+    full_image = ""
+    if post.image_url:
+        escaped_url = html.escape(post.image_url)
+        preview_image = f"""
+            <a class="post-image-preview" href="{escaped_url}" aria-label="Open full prayer image for {html.escape(display_title)}">
+              <img src="{escaped_url}" alt="{image_alt}" loading="lazy">
+            </a>"""
+        full_image = f"""
+                <figure class="post-full-image">
+                  <img src="{escaped_url}" alt="{image_alt}" loading="lazy">
+                </figure>"""
+
     return f"""          <article class="{classes}" id="post-{post.number}">
+            <div class="post-card-main">
+              <div>
             <time datetime="{html.escape(post.date_iso)}">{html.escape(post.date_display)}</time>
-            <h3>{html.escape(post.title)}</h3>
+            <h3>{html.escape(display_title)}</h3>
             <p>{html.escape(post.excerpt)}</p>
+              </div>
+{preview_image}
+            </div>
             <details class="post-expand">
               <summary>Read full prayer</summary>
               <div class="post-body">
+{full_image}
 {post.body_html}
               </div>
             </details>
@@ -170,7 +206,7 @@ def render_page(posts: list[PrayerPost]) -> str:
       content="Weekly prayers for SEiN in a blog-style archive."
     >
     <title>Prayers | SEiN</title>
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260501-title-wrap">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260501-prayer-images">
   </head>
   <body>
     <header class="site-header">
