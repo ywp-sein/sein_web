@@ -9,6 +9,7 @@ This version is intentionally lightweight:
 - `index.html` contains the page content and structure.
 - `about.html`, `prayers.html`, `homelessness.html`, and `contact.html`
   provide the main navigation pages.
+- `about-me.html` is an About subpage for Yuan-Wei Pi.
 - `homelessness.html` is the Missions overview.
 - `archiving-homelessness.html` is the homelessness detail page under Missions.
 - `imprint.html` and `privacy.html` provide local legal pages so the site does

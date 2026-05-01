@@ -190,8 +190,9 @@ def render_page(posts: list[PrayerPost]) -> str:
         <div class="nav-group">
           <a href="about.html">About</a>
           <div class="sub-nav" aria-label="About pages">
-            <a href="about.html#convictions-title">Calling</a>
-            <a href="about.html#convictions-title">Inspirations</a>
+            <a href="about.html#calling">Calling</a>
+            <a href="about.html#inspirations">Inspirations</a>
+            <a href="about-me.html">About Me</a>
           </div>
         </div>
         <a href="prayers.html">Prayers</a>
