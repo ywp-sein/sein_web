@@ -161,6 +161,70 @@ img {
   background: currentColor;
 }
 
+.section-rail {
+  position: fixed;
+  top: 50%;
+  right: clamp(14px, 2.4vw, 34px);
+  z-index: 18;
+  display: grid;
+  gap: 14px;
+  transform: translateY(-50%);
+}
+
+.section-rail::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 6px;
+  width: 2px;
+  background: rgba(11, 89, 104, 0.2);
+}
+
+.section-rail a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 20px;
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.section-rail span {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  border: 2px solid rgba(11, 89, 104, 0.38);
+  border-radius: 50%;
+  background: var(--surface);
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.section-rail strong {
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.section-rail a:hover strong,
+.section-rail a:focus-visible strong,
+.section-rail a.is-active strong {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section-rail a:hover span,
+.section-rail a:focus-visible span,
+.section-rail a.is-active span {
+  border-color: var(--red);
+  background: var(--red);
+  transform: scale(1.08);
+}
+
 .hero {
   position: relative;
   min-height: 88vh;
@@ -785,6 +849,15 @@ blockquote cite {
 }
 
 @media (max-width: 880px) {
+  .section-rail {
+    right: 8px;
+    gap: 10px;
+  }
+
+  .section-rail strong {
+    display: none;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -854,6 +927,10 @@ blockquote cite {
 }
 
 @media (max-width: 560px) {
+  .section-rail {
+    display: none;
+  }
+
   .site-header {
     padding: 14px 16px;
   }

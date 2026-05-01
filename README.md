@@ -6,18 +6,15 @@ boundary of the work.
 
 This version is intentionally lightweight:
 
-- `index.html` contains the page content and structure.
-- `about.html`, `prayers.html`, `homelessness.html`, and `contact.html`
-  provide the main navigation pages.
-- `about-us.html` is an About subpage for the people around SEiN, beginning
-  with Yuan-Wei Pi.
-- `homelessness.html` is the Missions overview.
-- `archiving-homelessness.html` is the homelessness detail page under Missions.
-- `imprint.html` and `privacy.html` provide local legal pages so the site does
-  not depend on Wix links.
-- `styles.css` contains the visual design and responsive layout.
-- `script.js` contains the mobile navigation and email form behavior.
-- `tools/update_prayers.py` regenerates the prayers blog from
+- `index.html` is the landing page.
+- `about/` contains About SEiN and About Us pages.
+- `missions/` contains the Missions overview and mission detail pages.
+- `prayers/` contains the generated prayers blog.
+- `contact/` contains the contact page.
+- `legal/` contains Imprint and Privacy Policy pages.
+- `assets/` contains shared CSS, JavaScript, and media.
+- Root files such as `about.html` and `prayers.html` are redirect shims for old URLs.
+- `tools/update_prayers.py` regenerates `prayers/index.html` from
   `../sein_prayers/src/SUMMARY.md`.
 - `tools/watch_prayers.py` watches the prayer source files and regenerates the
   blog whenever `SUMMARY.md` or a weekly prayer markdown file changes.
@@ -49,8 +46,8 @@ python3 tools/watch_prayers.py
 
 ## Next content to add
 
-- Replace `contact@sein-live.com` in `script.js` with the preferred public email.
+- Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.
 - Decide where the generated `sein_prayers` and `sein_knowledge_hub` books will be
-  published, then add archive links from `prayers.html` and `homelessness.html`.
-- Review `imprint.html` and `privacy.html` before production deployment,
+  published, then add archive links from `prayers/` and `missions/`.
+- Review `legal/imprint.html` and `legal/privacy.html` before production deployment,
   especially if analytics, donations, newsletters, or third-party embeds are added.

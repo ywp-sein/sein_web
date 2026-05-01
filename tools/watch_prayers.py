@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Watch the prayer source files and regenerate prayers.html on changes."""
+"""Watch the prayer source files and regenerate prayers/index.html on changes."""
 
 from __future__ import annotations
 

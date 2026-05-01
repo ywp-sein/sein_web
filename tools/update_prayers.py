@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate prayers.html from ../sein_prayers/src/SUMMARY.md."""
+"""Generate prayers/index.html from ../sein_prayers/src/SUMMARY.md."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PRAYERS_SRC = ROOT.parent / "sein_prayers" / "src"
 SUMMARY = PRAYERS_SRC / "SUMMARY.md"
-OUTPUT = ROOT / "prayers.html"
+OUTPUT = ROOT / "prayers" / "index.html"
 
 
 @dataclass
@@ -170,12 +170,12 @@ def render_page(posts: list[PrayerPost]) -> str:
       content="Weekly prayers for SEiN in a blog-style archive."
     >
     <title>Prayers | SEiN</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="SEiN home">
-        <img class="brand-logo" src="media/logo/logo_cross_final.png" alt="SEiN - Save Everyone in Need">
+      <a class="brand" href="/" aria-label="SEiN home">
+        <img class="brand-logo" src="/assets/media/logo/logo_cross_final.png" alt="SEiN - Save Everyone in Need">
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -186,28 +186,34 @@ def render_page(posts: list[PrayerPost]) -> str:
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <div class="nav-group">
-          <a href="about.html">About</a>
+          <a href="/about/">About</a>
           <div class="sub-nav" aria-label="About pages">
-            <a href="about.html#calling">Calling</a>
-            <a href="about.html#inspirations">Inspirations</a>
-            <a href="about-us.html">About Us</a>
+            <a href="/about/#calling">Calling</a>
+            <a href="/about/#inspirations">Inspirations</a>
+            <a href="/about/us.html">About Us</a>
           </div>
         </div>
-        <a href="prayers.html">Prayers</a>
+        <a href="/prayers/">Prayers</a>
         <div class="nav-group">
-          <a href="homelessness.html">Missions</a>
+          <a href="/missions/">Missions</a>
           <div class="sub-nav" aria-label="Mission pages">
-            <a href="archiving-homelessness.html">Archiving Homelessness</a>
+            <a href="/missions/archiving-homelessness.html">Archiving Homelessness</a>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+        <a href="/contact/">Contact</a>
       </nav>
     </header>
 
+    <nav class="section-rail" aria-label="Prayers page sections">
+      <a href="#prayers-top" data-section-link="prayers-top" aria-label="Top"><span></span><strong>Top</strong></a>
+      <a href="#prayer-archive" data-section-link="prayer-archive" aria-label="Prayer Archive"><span></span><strong>Archive</strong></a>
+      <a href="#post-{latest.number}" data-section-link="post-{latest.number}" aria-label="Latest Prayer"><span></span><strong>Latest</strong></a>
+    </nav>
+
     <main>
-      <section class="page-hero">
+      <section class="page-hero" id="prayers-top">
         <p class="eyebrow">Prayers</p>
         <h1>Weekly prayers for SEiN.</h1>
         <p>
@@ -216,7 +222,7 @@ def render_page(posts: list[PrayerPost]) -> str:
         </p>
       </section>
 
-      <section class="section blog-layout" aria-labelledby="latest-prayers-title">
+      <section class="section blog-layout" id="prayer-archive" aria-labelledby="latest-prayers-title">
         <div class="blog-intro">
           <p class="eyebrow">Latest Posts</p>
           <h2 id="latest-prayers-title">Prayer before planning, communion before action.</h2>
@@ -237,17 +243,17 @@ def render_page(posts: list[PrayerPost]) -> str:
     <footer class="site-footer">
       <p>© 2026 Yuan-Wei Pi. All rights reserved.</p>
       <p>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="prayers.html">Prayers</a>
-        <a href="homelessness.html">Missions</a>
-        <a href="contact.html">Contact</a>
-        <a href="imprint.html">Imprint</a>
-        <a href="privacy.html">Privacy policy</a>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/prayers/">Prayers</a>
+        <a href="/missions/">Missions</a>
+        <a href="/contact/">Contact</a>
+        <a href="/legal/imprint.html">Imprint</a>
+        <a href="/legal/privacy.html">Privacy policy</a>
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
 """
