@@ -94,6 +94,7 @@ img {
 
 .nav-group {
   position: relative;
+  padding: 4px 0;
 }
 
 .site-nav a,
@@ -117,18 +118,32 @@ img {
   font-weight: 800;
 }
 
+.nav-group.is-open > a {
+  background: var(--teal-soft);
+  outline: none;
+}
+
 .sub-nav {
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 0;
   z-index: 30;
   min-width: 220px;
   display: none;
-  padding: 8px;
+  padding: 10px 8px 8px;
   background: var(--surface);
   border: 1px solid rgba(11, 89, 104, 0.18);
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+.sub-nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
 }
 
 .sub-nav a {
@@ -139,7 +154,8 @@ img {
 }
 
 .nav-group:hover .sub-nav,
-.nav-group:focus-within .sub-nav {
+.nav-group:focus-within .sub-nav,
+.nav-group.is-open .sub-nav {
   display: block;
 }
 

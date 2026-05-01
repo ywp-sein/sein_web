@@ -1,5 +1,6 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
+const navGroups = document.querySelectorAll(".nav-group");
 const contactForm = document.querySelector("#contact-form");
 const formNote = document.querySelector("#form-note");
 const sectionLinks = document.querySelectorAll("[data-section-link]");
@@ -13,9 +14,40 @@ if (navToggle) {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
+    if (link.parentElement?.classList.contains("nav-group") && window.innerWidth > 880) {
+      return;
+    }
+
     document.body.classList.remove("nav-open");
     navToggle?.setAttribute("aria-expanded", "false");
+    navGroups.forEach((group) => group.classList.remove("is-open"));
   });
+});
+
+navGroups.forEach((group) => {
+  const trigger = group.querySelector(":scope > a");
+
+  trigger?.addEventListener("click", (event) => {
+    if (window.innerWidth <= 880) {
+      return;
+    }
+
+    if (!group.classList.contains("is-open")) {
+      event.preventDefault();
+      navGroups.forEach((other) => {
+        if (other !== group) {
+          other.classList.remove("is-open");
+        }
+      });
+      group.classList.add("is-open");
+    }
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".site-nav")) {
+    navGroups.forEach((group) => group.classList.remove("is-open"));
+  }
 });
 
 if (contactForm) {
