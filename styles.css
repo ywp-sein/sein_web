@@ -662,11 +662,66 @@ blockquote cite {
   color: var(--muted);
 }
 
-.post-card a {
+.post-card a,
+.post-expand summary {
   justify-self: start;
   margin-top: 4px;
   color: var(--red);
   font-weight: 900;
+}
+
+.post-expand {
+  margin-top: 8px;
+}
+
+.post-expand summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  border: 1px solid rgba(143, 47, 51, 0.28);
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.post-expand summary:hover,
+.post-expand summary:focus-visible {
+  background: rgba(143, 47, 51, 0.08);
+  outline: none;
+}
+
+.post-body {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.post-body p,
+.post-body .list-item {
+  margin: 0 0 1em;
+  color: #33413c;
+}
+
+.post-body h4 {
+  margin: 1.4em 0 0.55em;
+  color: var(--green-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+}
+
+.post-body blockquote {
+  margin: 1em 0;
+  padding-left: 18px;
+  border-left: 4px solid var(--gold);
+}
+
+.post-body blockquote p {
+  margin: 0;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1.45;
 }
 
 .page-contact {
