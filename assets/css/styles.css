@@ -454,6 +454,30 @@ h3 {
   font-size: clamp(1.08rem, 2vw, 1.28rem);
 }
 
+.media-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+  gap: clamp(32px, 6vw, 78px);
+  align-items: center;
+}
+
+.media-hero-copy {
+  min-width: 0;
+}
+
+.media-hero-image {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.media-hero-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .compact-hero {
   padding-bottom: clamp(36px, 6vw, 62px);
 }
@@ -1043,7 +1067,8 @@ blockquote cite {
   .knowledge,
   .contact,
   .story-grid,
-  .blog-layout {
+  .blog-layout,
+  .media-hero {
     grid-template-columns: 1fr;
   }
 

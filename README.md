@@ -46,6 +46,24 @@ For automatic local updates while editing prayer files, run:
 python3 tools/watch_prayers.py
 ```
 
+## Inner page header with image
+
+Use this template on non-landing pages when a page needs an image beside the H1.
+Place local images under `assets/media/` and keep descriptive alt text.
+
+```html
+<section class="page-hero media-hero" id="example-top">
+  <div class="media-hero-copy">
+    <p class="eyebrow">Page Label</p>
+    <h1>Page title.</h1>
+    <p>A short page introduction that explains why this page exists.</p>
+  </div>
+  <figure class="media-hero-image">
+    <img src="/assets/media/example/example.jpg" alt="Describe the image">
+  </figure>
+</section>
+```
+
 ## Next content to add
 
 - Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.
