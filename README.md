@@ -1,13 +1,16 @@
 # SEiN Website
 
-The open-source main website for SEiN, a Christian education, business, and
-social initiative for Berlin's homeless.
+The open-source main website for SEiN, an initiative to archive social issues
+through Christ. Homelessness in Berlin is the current mission, not the whole
+boundary of the work.
 
 This version is intentionally lightweight:
 
 - `index.html` contains the page content and structure.
 - `about.html`, `prayers.html`, `homelessness.html`, and `contact.html`
   provide the main navigation pages.
+- `homelessness.html` is the Missions overview.
+- `archiving-homelessness.html` is the homelessness detail page under Missions.
 - `imprint.html` and `privacy.html` provide local legal pages so the site does
   not depend on Wix links.
 - `styles.css` contains the visual design and responsive layout.

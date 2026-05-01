@@ -189,7 +189,7 @@ def render_page(posts: list[PrayerPost]) -> str:
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="prayers.html" aria-current="page">Prayers</a>
-        <a href="homelessness.html">Homelessness</a>
+        <a href="homelessness.html">Missions</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
@@ -228,7 +228,7 @@ def render_page(posts: list[PrayerPost]) -> str:
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="prayers.html">Prayers</a>
-        <a href="homelessness.html">Homelessness</a>
+        <a href="homelessness.html">Missions</a>
         <a href="contact.html">Contact</a>
         <a href="imprint.html">Imprint</a>
         <a href="privacy.html">Privacy policy</a>

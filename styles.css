@@ -319,6 +319,24 @@ h3 {
   font-weight: 800;
 }
 
+.prose-panel {
+  padding: clamp(24px, 4vw, 34px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.prose-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.prose-panel p + p {
+  margin-top: 1em;
+}
+
 .intro {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
