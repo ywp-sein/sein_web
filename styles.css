@@ -1,16 +1,17 @@
 :root {
   color-scheme: light;
-  --ink: #16201d;
-  --muted: #5f6f68;
-  --paper: #fbfaf7;
+  --ink: #111717;
+  --muted: #5d6668;
+  --paper: #f7f9f9;
   --surface: #ffffff;
-  --line: #dfe4dd;
-  --green: #235f4f;
-  --green-dark: #123a30;
-  --red: #8f2f33;
+  --line: #dbe4e6;
+  --green: #0b5968;
+  --green-dark: #062f38;
+  --red: #b43939;
   --gold: #c18b2f;
-  --teal: #0f766e;
-  --shadow: 0 18px 55px rgba(21, 31, 28, 0.12);
+  --teal: #0b5968;
+  --teal-soft: #e7f1f3;
+  --shadow: 0 18px 55px rgba(5, 32, 38, 0.12);
   --max: 1180px;
 }
 
@@ -66,61 +67,21 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(18px, 4vw, 48px);
-  background: rgba(251, 250, 247, 0.9);
-  border-bottom: 1px solid rgba(22, 32, 29, 0.08);
+  padding: 14px clamp(18px, 4vw, 48px);
+  background: rgba(6, 47, 56, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(18px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-width: 170px;
+  min-width: 148px;
 }
 
-.brand strong {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  line-height: 1;
-}
-
-.brand small {
-  display: block;
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.25;
-}
-
-.brand-mark {
-  position: relative;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  border: 2px solid var(--red);
-  border-radius: 50%;
-}
-
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: var(--red);
-  transform: translate(-50%, -50%);
-}
-
-.brand-mark::before {
-  width: 4px;
-  height: 22px;
-}
-
-.brand-mark::after {
-  width: 18px;
-  height: 4px;
-  top: 44%;
+.brand-logo {
+  width: clamp(128px, 14vw, 176px);
+  height: auto;
 }
 
 .site-nav {
@@ -133,18 +94,18 @@ img {
 .site-nav a {
   border-radius: 6px;
   padding: 9px 12px;
-  color: #26332f;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .site-nav a[aria-current="page"] {
-  background: rgba(35, 95, 79, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   outline: none;
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--green-dark);
+  color: white;
   font-weight: 800;
 }
 
@@ -154,8 +115,8 @@ img {
   height: 42px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: var(--surface);
-  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
   padding: 9px;
 }
 
@@ -189,8 +150,8 @@ img {
 
 .hero-scrim {
   background:
-    linear-gradient(90deg, rgba(8, 21, 18, 0.86), rgba(8, 21, 18, 0.56) 44%, rgba(8, 21, 18, 0.15)),
-    linear-gradient(0deg, rgba(8, 21, 18, 0.62), rgba(8, 21, 18, 0));
+    linear-gradient(90deg, rgba(3, 22, 27, 0.9), rgba(6, 47, 56, 0.68) 46%, rgba(6, 47, 56, 0.12)),
+    linear-gradient(0deg, rgba(3, 22, 27, 0.64), rgba(3, 22, 27, 0));
 }
 
 .hero-content {
@@ -211,6 +172,12 @@ img {
 
 .hero .eyebrow {
   color: #f1c76f;
+}
+
+.hero-logo {
+  width: min(310px, 74vw);
+  height: auto;
+  margin: 0 0 24px;
 }
 
 h1,
@@ -281,7 +248,7 @@ h3 {
 
 .button.primary:hover,
 .button.primary:focus-visible {
-  background: #7d292d;
+  background: #963030;
 }
 
 .button.secondary {
@@ -349,7 +316,7 @@ h3 {
 .principles p {
   margin: 0;
   padding: 20px;
-  color: #2d3a35;
+  color: var(--ink);
 }
 
 .story-grid {
@@ -443,7 +410,7 @@ blockquote p,
 
 .pathway:hover,
 .pathway:focus-visible {
-  border-color: rgba(35, 95, 79, 0.45);
+  border-color: rgba(11, 89, 104, 0.45);
   outline: none;
 }
 
@@ -551,7 +518,7 @@ blockquote cite {
 .contact-form label {
   display: grid;
   gap: 7px;
-  color: #2f3936;
+  color: var(--ink);
   font-size: 0.9rem;
   font-weight: 800;
 }
@@ -570,7 +537,7 @@ blockquote cite {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--green);
-  outline: 3px solid rgba(35, 95, 79, 0.14);
+  outline: 3px solid rgba(11, 89, 104, 0.16);
 }
 
 .form-note {
@@ -586,7 +553,7 @@ blockquote cite {
   justify-content: space-between;
   gap: 14px 24px;
   padding: 28px clamp(20px, 5vw, 48px);
-  background: #f1f4ef;
+  background: var(--teal-soft);
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
 }
@@ -678,7 +645,7 @@ blockquote cite {
   display: inline-flex;
   align-items: center;
   min-height: 42px;
-  border: 1px solid rgba(143, 47, 51, 0.28);
+  border: 1px solid rgba(180, 57, 57, 0.28);
   border-radius: 6px;
   padding: 8px 12px;
   cursor: pointer;
@@ -687,7 +654,7 @@ blockquote cite {
 
 .post-expand summary:hover,
 .post-expand summary:focus-visible {
-  background: rgba(143, 47, 51, 0.08);
+  background: rgba(180, 57, 57, 0.08);
   outline: none;
 }
 
@@ -700,7 +667,7 @@ blockquote cite {
 .post-body p,
 .post-body .list-item {
   margin: 0 0 1em;
-  color: #33413c;
+  color: #29383b;
 }
 
 .post-body h4 {
@@ -735,15 +702,15 @@ blockquote cite {
 
   .site-nav {
     position: fixed;
-    top: 79px;
+    top: 73px;
     left: 12px;
     right: 12px;
     display: none;
     flex-direction: column;
     align-items: stretch;
     padding: 14px;
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: var(--green-dark);
+    border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 8px;
     box-shadow: var(--shadow);
   }
@@ -785,8 +752,8 @@ blockquote cite {
     min-width: 0;
   }
 
-  .brand small {
-    display: none;
+  .brand-logo {
+    width: 128px;
   }
 
   .hero {

@@ -175,11 +175,7 @@ def render_page(posts: list[PrayerPost]) -> str:
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="SEiN home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <strong>SEiN</strong>
-          <small>Save Everyone in Need</small>
-        </span>
+        <img class="brand-logo" src="media/logo/logo_cross_final.png" alt="SEiN - Save Everyone in Need">
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
