@@ -329,12 +329,6 @@ img {
   color: #f1c76f;
 }
 
-.hero-logo {
-  width: min(310px, 74vw);
-  height: auto;
-  margin: 0 0 24px;
-}
-
 h1,
 h2,
 h3,
