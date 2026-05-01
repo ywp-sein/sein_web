@@ -84,29 +84,63 @@ img {
   height: auto;
 }
 
-.site-nav {
+.site-nav,
+.nav-group {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 0.94rem;
 }
 
-.site-nav a {
+.nav-group {
+  position: relative;
+}
+
+.site-nav a,
+.nav-group > a {
   border-radius: 6px;
   padding: 9px 12px;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--green-dark);
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
-.site-nav a[aria-current="page"] {
-  background: rgba(255, 255, 255, 0.12);
+.site-nav a[aria-current="page"],
+.nav-group:hover > a,
+.nav-group:focus-within > a {
+  background: var(--teal-soft);
   outline: none;
 }
 
 .site-nav a[aria-current="page"] {
-  color: white;
+  color: var(--green);
   font-weight: 800;
+}
+
+.sub-nav {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 30;
+  min-width: 220px;
+  display: none;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid rgba(11, 89, 104, 0.18);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.sub-nav a {
+  display: block;
+  padding: 9px 10px;
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+
+.nav-group:hover .sub-nav,
+.nav-group:focus-within .sub-nav {
+  display: block;
 }
 
 .nav-toggle {
@@ -115,8 +149,8 @@ img {
   height: 42px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
+  background: var(--teal-soft);
+  color: var(--green-dark);
   padding: 9px;
 }
 
@@ -764,10 +798,31 @@ blockquote cite {
     flex-direction: column;
     align-items: stretch;
     padding: 14px;
-    background: var(--green-dark);
-    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: var(--surface);
+    border: 1px solid rgba(11, 89, 104, 0.18);
     border-radius: 8px;
     box-shadow: var(--shadow);
+  }
+
+  .nav-group {
+    display: grid;
+    gap: 4px;
+  }
+
+  .sub-nav {
+    position: static;
+    display: grid;
+    min-width: 0;
+    padding: 0 0 0 14px;
+    background: transparent;
+    border: 0;
+    border-left: 2px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .sub-nav a {
+    white-space: normal;
   }
 
   body.nav-open .site-nav {

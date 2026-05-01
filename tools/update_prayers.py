@@ -187,9 +187,20 @@ def render_page(posts: list[PrayerPost]) -> str:
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="prayers.html" aria-current="page">Prayers</a>
-        <a href="homelessness.html">Missions</a>
+        <div class="nav-group">
+          <a href="about.html">About</a>
+          <div class="sub-nav" aria-label="About pages">
+            <a href="about.html#convictions-title">Calling</a>
+            <a href="about.html#convictions-title">Inspirations</a>
+          </div>
+        </div>
+        <a href="prayers.html">Prayers</a>
+        <div class="nav-group">
+          <a href="homelessness.html">Missions</a>
+          <div class="sub-nav" aria-label="Mission pages">
+            <a href="archiving-homelessness.html">Archiving Homelessness</a>
+          </div>
+        </div>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
