@@ -170,7 +170,7 @@ def render_page(posts: list[PrayerPost]) -> str:
       content="Weekly prayers for SEiN in a blog-style archive."
     >
     <title>Prayers | SEiN</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260501-title-wrap">
   </head>
   <body>
     <header class="site-header">
@@ -235,7 +235,7 @@ def render_page(posts: list[PrayerPost]) -> str:
       <section class="section blog-layout" id="prayer-archive" aria-labelledby="latest-prayers-title">
         <div class="blog-intro">
           <p class="eyebrow">Latest Posts</p>
-          <h2 id="latest-prayers-title">Prayer before planning, communion before action.</h2>
+          <h2 id="latest-prayers-title">Prayer before planning,<br>communion before action.</h2>
           <p>
             This page is generated from <code>sein_prayers/src/SUMMARY.md</code>.
             Add a new weekly prayer there, run the update script, and the latest
