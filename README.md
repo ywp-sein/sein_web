@@ -8,6 +8,8 @@ This version is intentionally lightweight:
 - `index.html` contains the page content and structure.
 - `about.html`, `prayers.html`, `homelessness.html`, and `contact.html`
   provide the main navigation pages.
+- `imprint.html` and `privacy.html` provide local legal pages so the site does
+  not depend on Wix links.
 - `styles.css` contains the visual design and responsive layout.
 - `script.js` contains the mobile navigation and email form behavior.
 - `tools/update_prayers.py` regenerates the prayers blog from
@@ -45,4 +47,5 @@ python3 tools/watch_prayers.py
 - Replace `contact@sein-live.com` in `script.js` with the preferred public email.
 - Decide where the generated `sein_prayers` and `sein_knowledge_hub` books will be
   published, then add archive links from `prayers.html` and `homelessness.html`.
-- Add dedicated pages for Imprint and Privacy Policy if this site will fully replace Wix.
+- Review `imprint.html` and `privacy.html` before production deployment,
+  especially if analytics, donations, newsletters, or third-party embeds are added.
