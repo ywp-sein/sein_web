@@ -8,12 +8,14 @@ This version is intentionally lightweight:
 
 - `index.html` is the landing page.
 - `about/` contains About SEiN and About Us pages.
-- `missions/` contains the Missions overview and mission detail pages.
+- `missions/` contains the Missions overview.
+- `missions/homelessness/` contains the Archiving Homelessness mission page
+  and its action subpages: Awakening Hope, Knowledge Hub, A Step Forward PoC,
+  and Compassion Voucher PoC.
 - `prayers/` contains the generated prayers blog.
 - `contact/` contains the contact page.
 - `legal/` contains Imprint and Privacy Policy pages.
 - `assets/` contains shared CSS, JavaScript, and media.
-- Root files such as `about.html` and `prayers.html` are redirect shims for old URLs.
 - `tools/update_prayers.py` regenerates `prayers/index.html` from
   `../sein_prayers/src/SUMMARY.md`.
 - `tools/watch_prayers.py` watches the prayer source files and regenerates the

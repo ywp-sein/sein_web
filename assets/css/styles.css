@@ -456,6 +456,18 @@ h3 {
   font-weight: 800;
 }
 
+.text-link {
+  justify-self: start;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
 .prose-panel {
   padding: clamp(24px, 4vw, 34px);
   background: var(--surface);

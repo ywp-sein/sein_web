@@ -199,7 +199,11 @@ def render_page(posts: list[PrayerPost]) -> str:
         <div class="nav-group">
           <a href="/missions/">Missions</a>
           <div class="sub-nav" aria-label="Mission pages">
-            <a href="/missions/archiving-homelessness.html">Archiving Homelessness</a>
+            <a href="/missions/homelessness/">Archiving Homelessness</a>
+            <a href="/missions/homelessness/awakening-hope.html">Awakening Hope</a>
+            <a href="/missions/homelessness/knowledge-hub.html">Knowledge Hub</a>
+            <a href="/missions/homelessness/a-step-forward-poc.html">A Step Forward PoC</a>
+            <a href="/missions/homelessness/compassion-voucher-poc.html">Compassion Voucher PoC</a>
           </div>
         </div>
         <a href="/contact/">Contact</a>
