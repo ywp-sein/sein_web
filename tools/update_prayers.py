@@ -254,7 +254,6 @@ def render_page(posts: list[PrayerPost]) -> str:
 
     <nav class="section-rail" aria-label="Prayers page sections">
       <a href="#prayers-top" data-section-link="prayers-top" aria-label="Top"><span></span><strong>Top</strong></a>
-      <a href="#post-{latest.number}" data-section-link="post-{latest.number}" aria-label="Latest Prayer"><span></span><strong>Latest</strong></a>
       <a href="#post-{first.number}" data-section-link="post-{first.number}" aria-label="First Prayer"><span></span><strong>First</strong></a>
     </nav>
 
