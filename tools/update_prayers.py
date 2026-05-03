@@ -226,8 +226,7 @@ def render_page(posts: list[PrayerPost]) -> str:
         <div class="nav-group">
           <a href="/about/">About</a>
           <div class="sub-nav" aria-label="About pages">
-            <a href="/about/#calling">Calling</a>
-            <a href="/about/#inspirations">Inspirations</a>
+            <a href="/about/why-sein.html">Why SEiN</a>
             <a href="/about/us.html">About Us</a>
           </div>
         </div>

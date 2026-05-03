@@ -7,7 +7,7 @@ boundary of the work.
 This version is intentionally lightweight:
 
 - `index.html` is the landing page.
-- `about/` contains About SEiN and About Us pages.
+- `about/` contains the About SEiN overview, Why SEiN, and About Us pages.
 - `missions/` contains the Missions overview.
 - `missions/homelessness/` contains the Archiving Homelessness mission page
   and its action subpages: Awakening Hope, Knowledge Hub, A Step Forward PoC,
