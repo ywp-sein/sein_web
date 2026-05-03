@@ -31,6 +31,15 @@ python3 -m http.server 8080
 
 Then visit <http://localhost:8080>.
 
+## Deploy to GitHub Pages
+
+The site deploys automatically from `main` through GitHub Actions. The workflow
+publishes the repository root as a static GitHub Pages site.
+
+In GitHub, keep Pages configured to use **GitHub Actions** as the source. After
+pushing to `main`, check the `Deploy GitHub Pages` workflow run. The public URL
+will be shown in that run after deployment succeeds.
+
 ## Update the prayers blog
 
 After adding a new weekly prayer to `../sein_prayers/src/weekly/` and listing it
