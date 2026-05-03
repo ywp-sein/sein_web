@@ -28,10 +28,33 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare project Pages artifact
+        run: |
+          mkdir _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            ./ _site/
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path("_site")
+          for path in root.rglob("*"):
+              if path.suffix.lower() not in {".html", ".css", ".js"}:
+                  continue
+              text = path.read_text(encoding="utf-8")
+              text = text.replace('href="/', 'href="/sein_web/')
+              text = text.replace('src="/', 'src="/sein_web/')
+              text = text.replace("url('/", "url('/sein_web/")
+              text = text.replace('url("/', 'url("/sein_web/')
+              path.write_text(text, encoding="utf-8")
+          PY
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment

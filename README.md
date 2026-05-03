@@ -34,7 +34,9 @@ Then visit <http://localhost:8080>.
 ## Deploy to GitHub Pages
 
 The site deploys automatically from `main` through GitHub Actions. The workflow
-publishes the repository root as a static GitHub Pages site.
+publishes the repository root as a static GitHub Pages site. During deployment,
+it rewrites root-relative local paths so the project site works at
+`https://ywp-sein.github.io/sein_web/`.
 
 In GitHub, keep Pages configured to use **GitHub Actions** as the source. After
 pushing to `main`, check the `Deploy GitHub Pages` workflow run. The public URL
