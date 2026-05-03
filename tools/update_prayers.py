@@ -194,6 +194,7 @@ def post_html(post: PrayerPost, featured: bool) -> str:
 
 def render_page(posts: list[PrayerPost]) -> str:
     latest = posts[0]
+    first = posts[-1]
     post_markup = "\n\n".join(post_html(post, index == 0) for index, post in enumerate(posts))
 
     return f"""<!doctype html>
@@ -253,8 +254,8 @@ def render_page(posts: list[PrayerPost]) -> str:
 
     <nav class="section-rail" aria-label="Prayers page sections">
       <a href="#prayers-top" data-section-link="prayers-top" aria-label="Top"><span></span><strong>Top</strong></a>
-      <a href="#prayer-archive" data-section-link="prayer-archive" aria-label="Prayer Archive"><span></span><strong>Archive</strong></a>
       <a href="#post-{latest.number}" data-section-link="post-{latest.number}" aria-label="Latest Prayer"><span></span><strong>Latest</strong></a>
+      <a href="#post-{first.number}" data-section-link="post-{first.number}" aria-label="First Prayer"><span></span><strong>First</strong></a>
     </nav>
 
     <main>
