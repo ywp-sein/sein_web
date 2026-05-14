@@ -9,9 +9,9 @@ This version is intentionally lightweight:
 - `index.html` is the landing page.
 - `about/` contains the About SEiN overview, Why SEiN, and About Us pages.
 - `missions/` contains the Missions overview.
-- `missions/homelessness/` contains the Archiving Homelessness mission page
-  and its action subpages: Awakening Hope, Knowledge Hub, A Step Forward PoC,
-  and Compassion Voucher PoC.
+- `missions/homelessness/` contains the Archiving Homelessness mission page,
+  How It Begins, and its action subpages: Awakening Hope, Knowledge Hub,
+  A Step Forward PoC, and Compassion Voucher PoC.
 - `prayers/` contains the generated prayers blog.
 - `contact/` contains the contact page.
 - `legal/` contains Imprint and Privacy Policy pages.
