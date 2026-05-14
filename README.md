@@ -62,7 +62,8 @@ python3 tools/watch_prayers.py
 ## Inner page header with image
 
 Use this template on non-landing pages when a page needs an image beside the H1.
-Place local images under `assets/media/` and keep descriptive alt text.
+Place local title images under `assets/media/title_images/` and keep
+descriptive alt text.
 
 ```html
 <section class="page-hero media-hero" id="example-top">
