@@ -4,6 +4,21 @@ const navGroups = document.querySelectorAll(".nav-group");
 const contactForm = document.querySelector("#contact-form");
 const formNote = document.querySelector("#form-note");
 const sectionLinks = document.querySelectorAll("[data-section-link]");
+const siteLinks = {
+  "knowledge-hub": "https://ywp-sein.github.io/sein_knowledge_hub/index.html",
+};
+
+document.querySelectorAll("[data-site-link]").forEach((link) => {
+  const href = siteLinks[link.dataset.siteLink];
+
+  if (href) {
+    link.href = href;
+
+    if (link.dataset.siteLinkLabel === "url") {
+      link.textContent = href;
+    }
+  }
+});
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {

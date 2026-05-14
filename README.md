@@ -78,7 +78,8 @@ Place local images under `assets/media/` and keep descriptive alt text.
 ## Next content to add
 
 - Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.
-- Decide where the generated `sein_prayers` and `sein_knowledge_hub` books will be
-  published, then add archive links from `prayers/` and `missions/`.
+- Decide where the generated `sein_prayers` book will be published, then add
+  archive links from `prayers/`.
 - Review `legal/imprint.html` and `legal/privacy.html` before production deployment,
   especially if analytics, donations, newsletters, or third-party embeds are added.
+- Update the Knowledge Hub URL in `assets/js/script.js` when its custom domain changes.
