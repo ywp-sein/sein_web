@@ -740,6 +740,29 @@ blockquote cite {
   font-weight: 800;
 }
 
+.scripture-block {
+  margin-top: 24px;
+}
+
+.scripture-block cite {
+  margin: 0 0 16px;
+}
+
+.scripture-block p {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.scripture-block p + p {
+  margin-top: 1em;
+}
+
+.scripture-block sup {
+  color: var(--green);
+  font-weight: 800;
+}
+
 .knowledge {
   align-items: center;
 }
