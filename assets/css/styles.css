@@ -781,6 +781,55 @@ blockquote cite {
   font-weight: 800;
 }
 
+.expand-panel {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.expand-panel summary {
+  display: grid;
+  gap: 6px;
+  padding: 22px;
+  cursor: pointer;
+  color: var(--green-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.18;
+}
+
+.expand-panel summary::marker {
+  color: var(--red);
+}
+
+.expand-panel summary small {
+  color: var(--muted);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.expand-panel .prose-panel {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 8px 8px;
+  box-shadow: none;
+}
+
+.future-space {
+  margin-top: 16px;
+  padding: 22px;
+  border: 1px dashed rgba(11, 89, 104, 0.38);
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+.future-space p {
+  margin: 0;
+}
+
 .knowledge {
   align-items: center;
 }
