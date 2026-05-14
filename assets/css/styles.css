@@ -626,6 +626,10 @@ h3 {
   margin-top: 1em;
 }
 
+.prose-panel blockquote {
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
 .intro {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
