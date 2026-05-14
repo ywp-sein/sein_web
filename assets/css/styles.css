@@ -504,6 +504,7 @@ h3 {
 
 .image-led-hero .eyebrow,
 .image-led-hero h1,
+.image-led-hero p:not(.eyebrow),
 .image-led-hero .hero-quote p,
 .image-led-hero .hero-quote cite,
 .image-led-hero .hero-quote a {
