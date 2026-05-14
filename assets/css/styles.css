@@ -490,9 +490,10 @@ h3 {
 .image-led-hero .media-hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  box-sizing: border-box;
+  max-width: 740px;
   margin-right: clamp(-140px, -8vw, -72px);
-  padding: clamp(28px, 5vw, 56px);
+  padding: clamp(30px, 4vw, 46px);
   background: rgba(6, 31, 34, 0.88);
   color: #f7fbf8;
   border: 1px solid rgba(230, 238, 233, 0.24);
@@ -513,12 +514,21 @@ h3 {
   color: #f3c66d;
 }
 
-.image-led-hero .hero-quote {
+.image-led-hero h1 {
   max-width: 680px;
+  font-size: clamp(2.15rem, 4.6vw, 4.25rem);
+}
+
+.image-led-hero .hero-quote {
+  max-width: 640px;
+  margin-top: clamp(18px, 3vw, 28px);
 }
 
 .image-led-hero .hero-quote p {
-  font-size: clamp(1.08rem, 1.7vw, 1.55rem);
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: clamp(1rem, 1.42vw, 1.34rem);
+  font-style: italic;
+  line-height: 1.48;
 }
 
 .image-led-hero .hero-quote a {
