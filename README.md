@@ -1,6 +1,6 @@
 # SEiN Website
 
-The open-source main website for SEiN, an initiative to archive social issues
+The open-source main website for SEiN, an initiative to end social issues
 through Christ. Homelessness in Berlin is the current mission, not the whole
 boundary of the work.
 
@@ -9,7 +9,7 @@ This version is intentionally lightweight:
 - `index.html` is the landing page.
 - `about/` contains the About SEiN overview, Why SEiN, and About Us pages.
 - `missions/` contains the Missions overview.
-- `missions/homelessness/` contains the Archiving Homelessness mission page,
+- `missions/homelessness/` contains the Ending Homelessness mission page,
   How It Begins, and its action subpages: Awakening Hope, Knowledge Hub,
   A Step Forward PoC, and Compassion Voucher PoC.
 - `prayers/` contains the generated prayers blog.
@@ -96,7 +96,7 @@ an article: title first, content directly after it.
 
 - Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.
 - Decide where the generated `sein_prayers` book will be published, then add
-  archive links from `prayers/`.
+  published links from `prayers/`.
 - Review `legal/imprint.html` and `legal/privacy.html` before production deployment,
   especially if analytics, donations, newsletters, or third-party embeds are added.
 - Update the Knowledge Hub URL in `assets/js/script.js` when its custom domain changes.

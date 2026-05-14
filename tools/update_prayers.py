@@ -204,7 +204,7 @@ def render_page(posts: list[PrayerPost]) -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Weekly prayers for SEiN in a blog-style archive."
+      content="Weekly prayers for SEiN in a blog format."
     >
     <title>Prayers | SEiN</title>
     <link rel="stylesheet" href="/assets/css/styles.css?v=20260501-prayer-images">
@@ -237,14 +237,14 @@ def render_page(posts: list[PrayerPost]) -> str:
           <div class="sub-nav mission-sub-nav" aria-label="Mission pages">
             <a href="/missions/">Mission Overview</a>
             <div class="sub-nav-section">
-              <span class="sub-nav-label">Homelessness</span>
+              <span class="sub-nav-label">Ending Homelessness</span>
               <div class="sub-nav-nested">
                 <a href="/missions/homelessness/how-it-begins.html">How It Begins</a>
-                <a href="/missions/homelessness/">Archiving Homelessness</a>
-                <a href="/missions/homelessness/awakening-hope.html">Awakening Hope</a>
-                <a href="/missions/homelessness/knowledge-hub.html">Knowledge Hub</a>
-                <a href="/missions/homelessness/a-step-forward-poc.html">A Step Forward PoC</a>
-                <a href="/missions/homelessness/compassion-voucher-poc.html">Compassion Voucher PoC</a>
+                <a href="/missions/homelessness/">Overview</a>
+                <a href="/missions/homelessness/awakening-hope.html">01 Awakening Hope</a>
+                <a href="/missions/homelessness/knowledge-hub.html">02 Knowledge Hub</a>
+                <a href="/missions/homelessness/a-step-forward-poc.html">03 A Step Forward PoC</a>
+                <a href="/missions/homelessness/compassion-voucher-poc.html">04 Compassion Voucher PoC</a>
               </div>
             </div>
           </div>
