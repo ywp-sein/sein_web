@@ -75,6 +75,23 @@ Place local images under `assets/media/` and keep descriptive alt text.
 </section>
 ```
 
+## Long content section
+
+Use this one-column template when the section text is long and should read like
+an article: title first, content directly after it.
+
+```html
+<section class="section content-section" id="example" aria-labelledby="example-title">
+  <div>
+    <p class="eyebrow">Section Label</p>
+    <h2 id="example-title">Section title.</h2>
+  </div>
+  <div class="prose-panel">
+    <p>Long-form content goes here.</p>
+  </div>
+</section>
+```
+
 ## Next content to add
 
 - Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.

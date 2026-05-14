@@ -719,6 +719,24 @@ blockquote p,
   align-items: start;
 }
 
+.content-section {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.content-section > div:first-child {
+  max-width: 780px;
+  margin-bottom: 18px;
+}
+
+.content-section h2 {
+  max-width: 780px;
+}
+
+.content-section .prose-panel {
+  box-shadow: none;
+}
+
 blockquote {
   margin: 0;
   padding: 0 0 0 28px;
