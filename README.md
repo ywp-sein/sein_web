@@ -16,6 +16,8 @@ This version is intentionally lightweight:
 - `contact/` contains the contact page.
 - `legal/` contains Imprint and Privacy Policy pages.
 - `assets/` contains shared CSS, JavaScript, and media.
+- `assets/js/script.js` renders the shared `<site-header>` and `<site-footer>`
+  components used by every page.
 - `tools/update_prayers.py` regenerates `prayers/index.html` from
   `../sein_prayers/src/SUMMARY.md`.
 - `tools/watch_prayers.py` watches the prayer source files and regenerates the
