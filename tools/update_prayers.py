@@ -159,6 +159,8 @@ def markdown_to_html(text: str) -> str:
 def post_html(post: PrayerPost, featured: bool) -> str:
     classes = "post-card featured" if featured else "post-card"
     display_title = post.title
+    if not re.match(rf"^(0*{int(post.number)}|{re.escape(post.number)})\b", display_title):
+        display_title = f"{post.number} {display_title}"
     image_alt = html.escape(f"Prayer image for {display_title}")
     preview_image = ""
     full_image = ""
