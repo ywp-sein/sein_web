@@ -96,9 +96,10 @@ customElements.define(
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const navGroups = document.querySelectorAll(".nav-group");
-const contactForm = document.querySelector("#contact-form");
-const formNote = document.querySelector("#form-note");
+const contactForms = document.querySelectorAll(".contact-form");
 const sectionLinks = document.querySelectorAll("[data-section-link]");
+const contactEmail = "contact@sein-live.com";
+const contactEndpoint = `https://formsubmit.co/ajax/${contactEmail}`;
 
 document.querySelectorAll("[data-site-link]").forEach((link) => {
   const href = siteLinks[link.dataset.siteLink];
@@ -157,22 +158,65 @@ document.addEventListener("click", (event) => {
   }
 });
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+contactForms.forEach((contactForm) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const data = new FormData(contactForm);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
     const message = String(data.get("message") || "").trim();
+    const formNote = contactForm.querySelector(".form-note");
+    const button = contactForm.querySelector("button[type='submit']");
 
-    const subject = encodeURIComponent(`SEiN contact from ${name}`);
-    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
+    data.set("_subject", `SEiN contact from ${name}`);
+    data.set("_template", "table");
+    data.set("_captcha", "false");
 
-    window.location.href = `mailto:contact@sein-live.com?subject=${subject}&body=${body}`;
-    formNote.textContent = "Your email app should open with the message prepared.";
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Sending...";
+    }
+
+    if (formNote) {
+      formNote.textContent = "Sending your message...";
+    }
+
+    try {
+      const response = await fetch(contactEndpoint, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      contactForm.reset();
+
+      if (formNote) {
+        formNote.textContent = "Thank you. Your message has been sent.";
+      }
+    } catch (error) {
+      const subject = encodeURIComponent(`SEiN contact from ${name}`);
+      const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
+
+      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+
+      if (formNote) {
+        formNote.textContent = "The direct send did not complete, so your email app should open as a fallback.";
+      }
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Send message";
+      }
+    }
   });
-}
+});
 
 if (sectionLinks.length) {
   const sectionIds = [...sectionLinks].map((link) => link.dataset.sectionLink);

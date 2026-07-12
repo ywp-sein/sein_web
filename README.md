@@ -97,7 +97,7 @@ an article: title first, content directly after it.
 
 ## Next content to add
 
-- Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email.
+- Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email for FormSubmit delivery and the mailto fallback.
 - Decide where the generated `sein_prayers` book will be published, then add
   published links from `prayers/`.
 - Review `legal/imprint.html` and `legal/privacy.html` before production deployment,
