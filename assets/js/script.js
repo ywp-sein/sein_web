@@ -213,7 +213,7 @@ contactForms.forEach((contactForm) => {
     } finally {
       if (button) {
         button.disabled = false;
-        button.textContent = "Send message";
+        button.textContent = "Send";
       }
     }
   });
