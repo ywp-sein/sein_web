@@ -234,9 +234,7 @@ def render_page(posts: list[PrayerPost]) -> str:
           <p class="eyebrow">Latest Posts</p>
           <h2 id="latest-prayers-title">Prayer before planning,<br>communion before action.</h2>
           <p>
-            This page is generated from <code>sein_prayers/src/SUMMARY.md</code>.
-            Add a new weekly prayer there, run the update script, and the latest
-            entry appears here automatically.
+            A public rhythm of intercession, reflection, and dependence on God.
           </p>
           <a class="button primary" href="#post-{latest.number}">Read latest prayer</a>
         </div>

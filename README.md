@@ -36,9 +36,8 @@ Then visit <http://localhost:8080>.
 ## Deploy to GitHub Pages
 
 The site deploys automatically from `main` through GitHub Actions. The workflow
-publishes the repository root as a static GitHub Pages site. During deployment,
-it rewrites root-relative local paths so the project site works at
-`https://ywp-sein.github.io/sein_web/`.
+publishes the repository root as a static GitHub Pages site for
+`https://sein-live.com/`.
 
 In GitHub, keep Pages configured to use **GitHub Actions** as the source. After
 pushing to `main`, check the `Deploy GitHub Pages` workflow run. The public URL
@@ -47,7 +46,8 @@ will be shown in that run after deployment succeeds.
 ## Update the prayers blog
 
 After adding a new weekly prayer to `../sein_prayers/src/weekly/` and listing it
-in `../sein_prayers/src/SUMMARY.md`, run:
+in `../sein_prayers/src/SUMMARY.md`, run the update script and the latest entry
+will appear in `prayers/index.html`:
 
 ```bash
 python3 tools/update_prayers.py
