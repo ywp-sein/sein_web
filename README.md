@@ -59,6 +59,15 @@ For automatic local updates while editing prayer files, run:
 python3 tools/watch_prayers.py
 ```
 
+## Contact form
+
+The contact form submits through FormSubmit from `assets/js/script.js`.
+`formSubmitToken` is a public frontend token provided by FormSubmit after
+activating the form for `https://sein-live.com/`; it is not a private secret,
+because all browser JavaScript can be viewed by visitors. Keep the token in the
+script for direct delivery, and update `contact@sein-live.com` only if the
+fallback email address changes.
+
 ## Inner page header with image
 
 Use this template on non-landing pages when a page needs an image beside the H1.
@@ -97,7 +106,6 @@ an article: title first, content directly after it.
 
 ## Next content to add
 
-- Replace `contact@sein-live.com` in `assets/js/script.js` with the preferred public email for FormSubmit delivery and the mailto fallback.
 - Decide where the generated `sein_prayers` book will be published, then add
   published links from `prayers/`.
 - Review `legal/imprint.html` and `legal/privacy.html` before production deployment,

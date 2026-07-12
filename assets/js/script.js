@@ -99,7 +99,8 @@ const navGroups = document.querySelectorAll(".nav-group");
 const contactForms = document.querySelectorAll(".contact-form");
 const sectionLinks = document.querySelectorAll("[data-section-link]");
 const contactEmail = "contact@sein-live.com";
-const contactEndpoint = `https://formsubmit.co/ajax/${contactEmail}`;
+const formSubmitToken = "5cb2e25b676b4c12457f94c8b1096285";
+const contactEndpoint = `https://formsubmit.co/ajax/${formSubmitToken}`;
 
 document.querySelectorAll("[data-site-link]").forEach((link) => {
   const href = siteLinks[link.dataset.siteLink];
