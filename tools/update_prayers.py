@@ -236,7 +236,7 @@ def render_page(posts: list[PrayerPost]) -> str:
           <p>
             A public rhythm of intercession, reflection, and dependence on God.
           </p>
-          <a class="button primary" href="#post-{latest.number}">Read latest prayer</a>
+          <a class="button primary" href="#post-{first.number}">First prayer</a>
         </div>
 
         <div class="post-list">
