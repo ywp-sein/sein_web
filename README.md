@@ -1,8 +1,9 @@
 # SEiN Website
 
 The open-source main website for SEiN, an initiative to end social issues
-through Christ. Homelessness in Berlin is the current mission, not the whole
-boundary of the work.
+through Christ. Its current missions include Ending Homelessness in Berlin and
+the Awaken Conscience editorial mission, without defining the whole boundary of
+the work.
 
 This version is intentionally lightweight:
 
