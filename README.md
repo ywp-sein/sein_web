@@ -8,7 +8,7 @@ This version is intentionally lightweight:
 
 - `index.html` is the landing page.
 - `about/` contains the About SEiN overview, Why SEiN, and About Us pages.
-- `missions/` contains the Missions overview.
+- `missions/` contains the Missions overview and the Awaken Conscience editorial column.
 - `missions/homelessness/` contains the Ending Homelessness mission page,
   How It Begins, and its action subpages: Awakening Hope, Knowledge Hub,
   A Step Forward PoC, and Compassion Voucher PoC.
@@ -103,6 +103,29 @@ an article: title first, content directly after it.
   </div>
 </section>
 ```
+
+## Add an Awaken Conscience article
+
+Copy `content/awaken-conscience/_template.md` to a new Markdown file in the same
+folder. Complete the title, date, labels and summary at the top, then write the
+article beneath the second `---` line.
+
+```markdown
+---
+title: Why Do We Look Away?
+date: 2026-08-19
+author: Yuan-Wei Pi
+labels: Society, Justice
+summary: A short introduction shown on the archive page.
+---
+
+Write the article here.
+```
+
+Run `make update-awaken-conscience`. The generator creates the article HTML,
+sorts the archive newest-first, marks the latest article as featured, and
+updates the label filters. Do not edit generated article HTML by hand; edit its
+Markdown source and run the command again.
 
 ## Next content to add
 

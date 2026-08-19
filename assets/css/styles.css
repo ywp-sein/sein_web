@@ -181,6 +181,17 @@ img {
   text-transform: uppercase;
 }
 
+.sub-nav .sub-nav-mission-link {
+  color: var(--green-dark);
+  white-space: normal;
+}
+
+.sub-nav .sub-nav-mission-link:hover,
+.sub-nav .sub-nav-mission-link:focus-visible {
+  background: var(--teal-soft);
+  outline: none;
+}
+
 .sub-nav-nested {
   display: grid;
   gap: 2px;
@@ -452,6 +463,201 @@ h3 {
   margin: 24px 0 0;
   color: var(--muted);
   font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.awaken-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: min(780px, 88vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.awaken-hero::after {
+  content: "?";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: clamp(-22px, 3vw, 44px);
+  transform: translateY(-52%);
+  color: rgba(11, 89, 104, 0.055);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22rem, 48vw, 42rem);
+  font-weight: 800;
+  line-height: 0.75;
+}
+
+.awaken-hero h1 {
+  letter-spacing: -0.055em;
+  line-height: 0.84;
+}
+
+.column-archive {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1fr);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: start;
+}
+
+.column-intro {
+  position: sticky;
+  top: 116px;
+}
+
+.column-intro p:not(.eyebrow) {
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.column-content {
+  display: grid;
+  gap: 26px;
+}
+
+.article-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.article-filters button,
+.article-label {
+  padding: 7px 11px;
+  color: var(--green-dark);
+  background: var(--teal-soft);
+  border: 1px solid rgba(11, 89, 104, 0.18);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.article-filters button {
+  cursor: pointer;
+}
+
+.article-filters button:hover,
+.article-filters button:focus-visible,
+.article-filters button.is-active {
+  color: white;
+  background: var(--green-dark);
+  outline: none;
+}
+
+.filter-result {
+  margin: -12px 0 -10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.article-list {
+  display: grid;
+  gap: 18px;
+}
+
+.category-labels,
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-items: center;
+}
+
+.article-card h3 {
+  margin-top: 2px;
+}
+
+.article-card[hidden] {
+  display: none;
+}
+
+.awaken-article-header .article-meta {
+  margin-top: 22px;
+}
+
+.awaken-article-header time {
+  color: var(--green);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.article-author {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.article-meta > *:not(:last-child)::after {
+  content: "·";
+  margin-left: 9px;
+  color: var(--line);
+}
+
+.article-card .article-author {
+  margin-top: -8px;
+}
+
+.article-body {
+  max-width: 820px;
+  padding-top: 0;
+}
+
+.article-body > p,
+.article-body > ul {
+  color: #29383b;
+  font-size: 1.08rem;
+}
+
+.article-body > p,
+.article-body > ul,
+.article-body > blockquote,
+.article-body > h2,
+.article-body > h3 {
+  margin-top: 1.4em;
+}
+
+.article-body h2,
+.article-body h3 {
+  color: var(--green-dark);
+}
+
+.article-body blockquote p {
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+}
+
+.article-body .article-return {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.article-empty-state {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(28px, 5vw, 52px);
+  background: var(--green-dark);
+  border-radius: 8px;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.article-empty-state .eyebrow {
+  color: #f1c76f;
+}
+
+.article-empty-state h3 {
+  max-width: 14ch;
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.article-empty-state p:last-child {
+  max-width: 540px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .media-hero {
@@ -1335,11 +1541,16 @@ blockquote cite {
   .contact,
   .story-grid,
   .blog-layout,
+  .column-archive,
   .media-hero {
     grid-template-columns: 1fr;
   }
 
   .blog-intro {
+    position: static;
+  }
+
+  .column-intro {
     position: static;
   }
 
@@ -1384,6 +1595,7 @@ blockquote cite {
   .site-header {
     padding: 14px 16px;
   }
+
 
   .brand {
     min-width: 0;

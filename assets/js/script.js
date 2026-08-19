@@ -41,12 +41,14 @@ const renderHeader = () => `
       <div class="nav-group">
         <a href="/missions/"${currentAttr("/missions/", "/missions/")}>Missions</a>
         <div class="sub-nav mission-sub-nav" aria-label="Mission pages">
-          <a href="/missions/"${currentAttr("/missions/", "")}>Mission Overview</a>
+          <a href="/missions/"${currentAttr("/missions/", "")}>All Missions</a>
           <div class="sub-nav-section">
-            <span class="sub-nav-label">Ending Homelessness</span>
+            <a class="sub-nav-label sub-nav-mission-link" href="/missions/awaken-conscience/"${currentAttr("/missions/awaken-conscience/", "/missions/awaken-conscience/")}>Awaken Conscience</a>
+          </div>
+          <div class="sub-nav-section">
+            <a class="sub-nav-label sub-nav-mission-link" href="/missions/homelessness/"${currentAttr("/missions/homelessness/", "")}>Ending Homelessness</a>
             <div class="sub-nav-nested">
               <a href="/missions/homelessness/how-it-begins.html"${currentAttr("/missions/homelessness/how-it-begins.html", "")}>How It Begins</a>
-              <a href="/missions/homelessness/"${currentAttr("/missions/homelessness/", "")}>Overview</a>
               <a href="/missions/homelessness/awakening-hope.html"${currentAttr("/missions/homelessness/awakening-hope.html", "")}>01 Awakening Hope</a>
               <a href="/missions/homelessness/knowledge-hub.html"${currentAttr("/missions/homelessness/knowledge-hub.html", "")}>02 Knowledge Hub</a>
               <a href="/missions/homelessness/a-step-forward-poc.html"${currentAttr("/missions/homelessness/a-step-forward-poc.html", "")}>03 A Step Forward PoC</a>
@@ -98,9 +100,39 @@ const navLinks = document.querySelectorAll(".site-nav a");
 const navGroups = document.querySelectorAll(".nav-group");
 const contactForms = document.querySelectorAll(".contact-form");
 const sectionLinks = document.querySelectorAll("[data-section-link]");
+const articleFilters = document.querySelectorAll("[data-article-filter]");
+const articleCards = document.querySelectorAll("[data-article-categories]");
+const filterResult = document.querySelector("[data-filter-result]");
 const contactEmail = "contact@sein-live.com";
 const formSubmitToken = "5cb2e25b676b4c12457f94c8b1096285";
 const contactEndpoint = `https://formsubmit.co/ajax/${formSubmitToken}`;
+
+articleFilters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    const selected = filter.dataset.articleFilter;
+    let visibleCount = 0;
+
+    articleFilters.forEach((button) => {
+      const isSelected = button === filter;
+      button.classList.toggle("is-active", isSelected);
+      button.setAttribute("aria-pressed", String(isSelected));
+    });
+
+    articleCards.forEach((card) => {
+      const categories = card.dataset.articleCategories.split(/\s+/);
+      const isVisible = selected === "all" || categories.includes(selected);
+      card.hidden = !isVisible;
+      visibleCount += Number(isVisible);
+    });
+
+    if (filterResult) {
+      const label = filter.textContent.trim();
+      filterResult.textContent = articleCards.length
+        ? `${visibleCount} ${visibleCount === 1 ? "article" : "articles"} in ${label}`
+        : "Articles will appear here soon";
+    }
+  });
+});
 
 document.querySelectorAll("[data-site-link]").forEach((link) => {
   const href = siteLinks[link.dataset.siteLink];
