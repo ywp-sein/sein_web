@@ -34,19 +34,19 @@ This is precisely the opposite of what virtue should produce.
 
 ## Virtue Is Alive
 
-Virtue is not static.
+**Virtue is not static.**
 
 We cannot reduce it to a fixed quantity of good deeds. A person cannot simply say, “I was kind last year, so I am equally kind this year.” Circumstances change. Responsibilities change. Our understanding changes. We change.
 
 Virtue therefore has to remain alive.
 
-A genuinely virtuous person continues learning how to love what is good, reject what is evil, act justly, become more compassionate, and recognize forms of selfishness that previously went unnoticed. Moral growth is not about continuously proving that we are good. It is about becoming increasingly oriented toward what is good.
+A genuinely virtuous person continues learning how to love what is good, reject what is evil, act justly, become more compassionate, and recognize forms of selfishness that previously went unnoticed. **Moral growth is not about continuously proving that we are good. It is about becoming increasingly oriented toward what is good.**
 
 This also explains a strange characteristic of genuine virtue: people who possess it deeply often feel little need to announce it.
 
 A humble person does not need to continually tell others, “I am humble.” In the same way, someone who constantly proclaims his or her own goodness gives us reason to wonder why that goodness requires so much advertisement.
 
-Virtue does not need to admire itself.
+**Virtue does not need to admire itself.**
 
 ## How Does the Heart Change?
 
@@ -122,7 +122,7 @@ This matters because morality addresses social brokenness at its roots.
 
 Every meaningful human action carries some intention behind it. External systems can influence our behavior, but when people's intentions themselves become oriented toward what is good, something more fundamental changes.
 
-Imagine a society in which caring for another person is so normal that people barely think of it as “being moral.”
+**Imagine a society in which caring for another person is so normal that people barely think of it as “being moral.”**
 
 Fairness is normal.
 
@@ -134,9 +134,9 @@ Taking responsibility for one's mistakes is normal.
 
 Doing what is right when nobody is watching is normal.
 
-At that point, morality is no longer primarily a performance.
+**At that point, morality is no longer primarily a performance.**
 
-It has become a way of life.
+**It has become a way of life.**
 
 And something else happens: people become less tolerant of unnecessary brokenness around them. When they encounter suffering, injustice, abandonment, exploitation, or cruelty, they do not simply say, “That is someone else's problem.”
 
