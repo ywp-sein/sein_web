@@ -3,7 +3,7 @@ title: What Does It Mean to Be a Moral Person?
 date: 2026-09-15
 author: Yuan-Wei Pi
 labels: Society, Justice, Humanity
-summary: If no one were watching, no one would praise you, and no one would ever know what you had done, would you still choose what is good?
+summary: Imagine a society in which caring for another person is so normal that people barely think of it as “being moral.” If no one were watching, no one would praise you, and no one would ever know what you had done, would you still choose what is good?
 ---
 
 Why is morality important to society?
