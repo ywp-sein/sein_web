@@ -1,6 +1,6 @@
 ---
 title: When AI Can Show Us Everything, Can We Still Imagine?
-date: 2026-09-27
+date: 2026-09-28
 author: Yuan-Wei Pi
 labels: Humanity, Learning, Technology
 summary: Do we still dare to dream big?
@@ -46,7 +46,7 @@ Imagination asks:
 
 That is where human curiosity becomes incredibly important.
 
-Some Ideas Should Sound Crazy
+## Some Ideas Should Sound Crazy
 Not every valuable idea begins by making sense.
 
 Sometimes curiosity takes us somewhere strange.
