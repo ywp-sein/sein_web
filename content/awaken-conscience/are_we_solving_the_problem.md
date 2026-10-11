@@ -48,11 +48,11 @@ If your mission is to eliminate a particular problem, complete success means tha
 
 That does not necessarily mean that the organization itself must disappear. The knowledge, people, relationships, and capabilities developed through solving one problem may be useful for solving another. An organization can evolve. Its people can take what they have learned and apply it elsewhere.
 
-But this possibility should not distract us from the more important question: are we maintaining this organization because it continues to serve its purpose, or has maintaining the organization itself become the purpose?
+But this possibility should not distract us from the more important question: **are we maintaining this organization because it continues to serve its purpose, or has maintaining the organization itself become the purpose?**
 
 The FAQ and the organization may seem like very different examples, but I think they reveal the same underlying pattern.
 
-An FAQ is created because people have questions. An organization is created because a problem needs to be solved. A process is created because something needs to be accomplished. Infrastructure is built because a goal requires support.
+An FAQ is created because people have questions. An organization is created because a problem needs to be solved. A process is created because something needs to be accomplished. **Infrastructure is built because a goal requires support.**
 
 These things are **means, not ends**.
 
