@@ -1,5 +1,5 @@
 ---
-title: Beyond Obligation: Responsibility, Wisdom, and the Capacity to Contribute
+title: Beyond Obligation
 date: 2026-11-17
 author: Yuan-Wei Pi
 labels: Humanity, Society, Justice
@@ -176,7 +176,7 @@ The goal is not to maximize the number of responsibilities we carry, but to deve
 
 This brings us to a deeper question: Why should we want to develop a greater capacity for responsibility in the first place?
 
-Some people may reasonably prefer a simpler life. They may wish to fulfill only their basic obligations, maintain their personal well-being, and avoid unnecessary commitments. There is nothing inherently wrong with that choice.
+Some people may reasonably prefer a simpler life. They may wish to fulfill only their basic obligations, maintain their personal well-being, and avoid unnecessary commitments.
 
 However, I think there is another consideration worth exploring.
 
